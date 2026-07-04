@@ -49,3 +49,6 @@ htmlcov/
 *.key
 credentials.json
 secrets.json
+
+# TypeScript build cache
+*.tsbuildinfo
