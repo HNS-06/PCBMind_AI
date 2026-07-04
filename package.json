@@ -1,0 +1,22 @@
+{
+  "name": "pcbmind-ai",
+  "version": "1.0.0",
+  "description": "AI-powered PCB Design Platform",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && py -m uvicorn app.main:app --reload --port 8000",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "test": "pytest tests/ backend/tests/ -v",
+    "test:eda": "pytest tests/test_eda_engine.py -v",
+    "test:agents": "pytest tests/test_agents.py -v",
+    "test:firmware": "pytest tests/test_firmware.py -v",
+    "docker:up": "docker compose -f docker/docker-compose.yml up -d",
+    "docker:down": "docker compose -f docker/docker-compose.yml down",
+    "lint": "cd frontend && npm run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
