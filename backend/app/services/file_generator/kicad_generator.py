@@ -10,6 +10,7 @@ class KiCadGenerator:
             '(kicad_sch (version 20230121) (generator "PCBMind AI")',
             f'  (uuid "pcbmind-{project.id}")',
             f'  (paper "A4")',
+            f'  (title_block (title "{project.name}"))',
             '',
             '  (lib_symbols',
         ]

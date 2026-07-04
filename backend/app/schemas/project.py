@@ -39,7 +39,7 @@ class ProjectResponse(BaseModel):
     schematic_data: dict
     firmware_code: str
     documentation: str
-    metadata: dict
+    metadata: dict = Field(..., validation_alias="project_metadata")
     version: int
     created_at: datetime
     updated_at: datetime

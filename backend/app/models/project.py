@@ -33,7 +33,7 @@ class Project(Base):
     schematic_data = Column(JSON, default=dict)
     firmware_code = Column(Text, default="")
     documentation = Column(Text, default="")
-    metadata = Column(JSON, default=dict)
+    project_metadata = Column("metadata", JSON, default=dict)
     version = Column(Integer, default=1)
 
     created_at = Column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))

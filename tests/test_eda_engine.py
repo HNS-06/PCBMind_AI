@@ -48,6 +48,8 @@ class MockProject:
         self.schematic_data = {
             "components": [
                 {"id": "U1", "type": "MCU", "value": "ESP32", "x": 100, "y": 100},
+                {"id": "R1", "type": "Resistor", "value": "10K", "x": 200, "y": 100},
+                {"id": "C1", "type": "Capacitor", "value": "100nF", "x": 300, "y": 100},
             ],
             "connections": self.connections,
         }

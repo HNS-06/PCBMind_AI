@@ -44,7 +44,7 @@ class ProjectGeneratorService:
                 project.firmware_code = firmware
                 project.documentation = documentation
                 project.status = ProjectStatus.COMPLETED
-                project.metadata = {"spec": spec, "model_used": model}
+                project.project_metadata = {"spec": spec, "model_used": model}
 
                 await db.commit()
                 logger.info(f"Project {project_id} generation completed")
@@ -57,7 +57,7 @@ class ProjectGeneratorService:
                 project = result.scalar_one_or_none()
                 if project:
                     project.status = ProjectStatus.ERROR
-                    project.metadata = {"error": str(e)}
+                    project.project_metadata = {"error": str(e)}
                     await db.commit()
 
     async def _analyze_requirements(self, prompt: str, model: str) -> dict:
