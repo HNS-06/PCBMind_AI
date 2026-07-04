@@ -22,7 +22,7 @@ class Settings(BaseSettings):
     CLAUDE_API_KEY: str = ""
 
     GROQ_MODEL: str = "llama-3.1-8b-instant"
-    GEMINI_MODEL: str = "gemini-2.0-flash"
+    GEMINI_MODEL: str = "gemini-flash-latest"
 
     OCTOPART_API_KEY: str = ""
     MOUSER_API_KEY: str = ""
